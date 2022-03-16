@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Mint_Hero_Name/static/css/main.bfdf90b1.chunk.css",
+    "main.js": "/Mint_Hero_Name/static/js/main.a7a016e3.chunk.js",
+    "main.js.map": "/Mint_Hero_Name/static/js/main.a7a016e3.chunk.js.map",
+    "runtime-main.js": "/Mint_Hero_Name/static/js/runtime-main.e6b5186c.js",
+    "runtime-main.js.map": "/Mint_Hero_Name/static/js/runtime-main.e6b5186c.js.map",
+    "static/js/2.f7da981e.chunk.js": "/Mint_Hero_Name/static/js/2.f7da981e.chunk.js",
+    "static/js/2.f7da981e.chunk.js.map": "/Mint_Hero_Name/static/js/2.f7da981e.chunk.js.map",
+    "index.html": "/Mint_Hero_Name/index.html",
+    "static/css/main.bfdf90b1.chunk.css.map": "/Mint_Hero_Name/static/css/main.bfdf90b1.chunk.css.map",
+    "static/js/2.f7da981e.chunk.js.LICENSE.txt": "/Mint_Hero_Name/static/js/2.f7da981e.chunk.js.LICENSE.txt",
+    "static/media/twitter-logo.a8a75254.svg": "/Mint_Hero_Name/static/media/twitter-logo.a8a75254.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6b5186c.js",
+    "static/js/2.f7da981e.chunk.js",
+    "static/css/main.bfdf90b1.chunk.css",
+    "static/js/main.a7a016e3.chunk.js"
+  ]
+}
