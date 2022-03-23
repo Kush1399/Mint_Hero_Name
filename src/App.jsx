@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import myEpicNft from './utils/MyEpicNFT.json'
+import LoadingIndicator from './components';
 
 // Constants
 const TWITTER_HANDLE = 'kushagra_shiv';
@@ -14,6 +15,7 @@ const CONTRACT_ADDRESS = "0x2f257cE4507532270D6AEEF3D7589676C977958e";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -91,6 +93,7 @@ const App = () => {
   }
 
   const askContractToMintNFT = async () => {
+    setIsLoading(true);
     try {
       const { ethereum } = window;
       if (ethereum) {
@@ -103,11 +106,14 @@ const App = () => {
         console.log("Mining...");
         await txn.wait();
         console.log(`Mined! See transaction at: https://rinkeby.etherscan.io/tx/${txn.hash}`);
+        setIsLoading(false);
       } else {
         console.log("Ethereum object doesn't exist!");
+        setIsLoading(false);
       }
     } catch (err) {
       console.error(err);
+      setIsLoading(false);
     }
   }
   // Render Methods
@@ -130,6 +136,7 @@ const App = () => {
             Each unique. Each beautiful. Discover your NFT today.
           </p>
           {currentAccount === "" ? renderNotConnectedContainer() : <button onClick={askContractToMintNFT} className="cta-button connect-wallet-button">Mint NFT</button>}
+          <div>{isLoading ? <LoadingIndicator /> : ''}</div>
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
