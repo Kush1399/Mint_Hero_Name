@@ -7,7 +7,6 @@
 
 .container {
   height: 100%;
-  background-color: #0d1116;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +28,7 @@
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(left, #4D77FF 30%, #F2FA5A 60%);
+  background: -webkit-linear-gradient(left, #4d77ff 30%, #f2fa5a 60%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,7 +48,7 @@
 }
 
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #4D77FF, #F2FA5A);
+  background: -webkit-linear-gradient(left, #4d77ff, #f2fa5a);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }

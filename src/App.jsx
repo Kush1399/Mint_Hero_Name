@@ -9,9 +9,9 @@ import LoadingIndicator from './components';
 // Constants
 const TWITTER_HANDLE = 'kushagra_shiv';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = 'https://testnets.opensea.io/assets';
+const OPENSEA_LINK = 'https://opensea.io/assets';
 const TOTAL_MINT_COUNT = 50;
-const CONTRACT_ADDRESS = "0x2f257cE4507532270D6AEEF3D7589676C977958e";
+const CONTRACT_ADDRESS = "0x9c788EDF35d32baC28bFff923b1e2430Ddba5cE6";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -30,9 +30,9 @@ const App = () => {
     let chainId = await ethereum.request({ method: 'eth_chainId' });
     console.log("Connected to chain " + chainId);
 
-    const rinkebyChainId = "0x4";
-    if (chainId !== rinkebyChainId) {
-      alert("You are not connected to the Rinkeby Test Network!");
+    const maticChainId = "0x89";
+    if (chainId !== maticChainId) {
+      alert("You are not connected to the Polygon Mainnet!");
       return;
     }
     if (accounts.length !== 0) {
@@ -58,9 +58,9 @@ const App = () => {
       console.log("Connected to chain " + chainId);
 
 
-      const rinkebyChainId = "0x4";
-      if (chainId !== rinkebyChainId) {
-        alert("You are not connected to the Rinkeby Test Network!");
+      const maticChainId = "0x89";
+      if (chainId !== maticChainId) {
+        alert("You are not connected to the Polygon Mainnet!");
         return;
       }
       console.log("Connected to account:", accounts[0]);
@@ -105,7 +105,7 @@ const App = () => {
         let txn = await connectedContract.makeAnEpicNFT();
         console.log("Mining...");
         await txn.wait();
-        console.log(`Mined! See transaction at: https://rinkeby.etherscan.io/tx/${txn.hash}`);
+        console.log(`Mined! See transaction at: https://polygonscan.com/tx/${txn.hash}`);
         setIsLoading(false);
       } else {
         console.log("Ethereum object doesn't exist!");
